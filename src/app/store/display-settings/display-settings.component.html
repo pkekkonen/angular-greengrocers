@@ -1,0 +1,22 @@
+<div class="display-settings">
+    <div class="filters">
+        <p>Filter: </p>
+        <label for="none">None</label>
+        <input type="radio" id="none" checked="checked" value="none" name="filters" (change)="onFilterChange($event)" />
+        <label for="vegetable">Vegetables</label>
+        <input type="radio" id="vegetable" value="vegetable" name="filters" (change)="onFilterChange($event)" />
+        <label for="fruit">Fruit</label>
+        <input type="radio" id="fruit" value="fruit" name="filters" (change)="onFilterChange($event)" />
+    </div>
+    <div class="sort">
+        <p>Sorting: </p>
+        <label for="no-sorting">None</label>
+        <input type="radio" checked="checked" id="no-sorting" value="none" name="sorting"
+            (change)="onSortingChange($event)" />
+        <label for="alphabetically-sort">Name</label>
+        <input type="radio" id="alphabetically-sort" value="alphabetically" name="sorting"
+            (change)="onSortingChange($event)" />
+        <label for="price-sort">Price</label>
+        <input type="radio" id="price-sort" value="pricing" name="sorting"(change)="onSortingChange($event)" />
+    </div>
+</div>

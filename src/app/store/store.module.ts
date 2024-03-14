@@ -5,13 +5,15 @@ import { StoreItemComponent } from './store-item/store-item.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CartModule } from '../cart/cart.module';
+import { DisplaySettingsComponent } from './display-settings/display-settings.component';
 
 
 
 @NgModule({
   declarations: [
     StoreListComponent,
-    StoreItemComponent
+    StoreItemComponent,
+    DisplaySettingsComponent
   ],
   imports: [
     CommonModule, 
@@ -22,7 +24,8 @@ import { CartModule } from '../cart/cart.module';
 
   exports: [
     StoreItemComponent,
-    StoreListComponent
+    StoreListComponent,
+    DisplaySettingsComponent
   ]
 })
 export class StoreModule { }

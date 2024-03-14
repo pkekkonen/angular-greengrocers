@@ -15,5 +15,18 @@ export class StoreListComponent {
   async ngOnInit() {
     this.items = await this.storeService.items;
   }
-  
+
+  getItems(): Item[] {
+    let res = this.items;
+    if(this.storeService.filter !== "none")
+      res = res.filter((i) => i.type === this.storeService.filter)
+    if(this.storeService.sort === "alphabetically") {
+      res = res.sort((a, b) => (a.name < b.name ? -1 : 1));
+    } else if(this.storeService.sort === "pricing") {
+      res = res.sort((a, b) => (a.price < b.price ? -1 : 1));
+    } else {
+      res = res.sort((a, b) => (a.id < b.id ? -1 : 1));
+    }
+    return res;
+  }
 }

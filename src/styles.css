@@ -187,3 +187,28 @@ app-cart-list {
     border-bottom: 2px solid #00675b;
   }
 }
+
+/* Sorting and Filtering */
+
+.display-settings {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.filters {
+  justify-self: start;
+  
+}
+
+.filters p, .sort p {
+  display: inline;
+  font-weight: bold;
+}
+
+.filters label, .sort label {
+  margin-left: 10px;
+}
+
+.sort {
+  justify-self: end;
+}

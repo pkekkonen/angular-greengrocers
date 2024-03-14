@@ -9,7 +9,8 @@ import { environment } from 'src/environments/environment.development';
   providedIn: 'root'
 })
 export class StoreService {
-
+  filter: string = "none";
+  sort: string = "none";
 
   http = inject(HttpClient);
 
@@ -18,5 +19,11 @@ export class StoreService {
     return firstValueFrom(this.http.get<Item[]>(`${environment.apiUrl}`,  {headers: {'Content-Type': 'application/json' }}));
   }
 
-  
+  updateFilter(newFilter: string) {
+    this.filter = newFilter;
+  }
+
+  updateSort(newSort: string) {
+    this.sort = newSort;
+  }
 }
