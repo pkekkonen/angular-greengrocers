@@ -1,9 +1,18 @@
 <header id="store">
   <h1>Greengrocers</h1>
-  <!-- your store here -->
+  <app-store-list></app-store-list>
 </header>
 <main id="cart">
   <h2>Your Cart</h2>
-  <!-- your cart here -->
-  <!-- your total here -->
+  <app-cart-list></app-cart-list>
+  <div class="total">
+    <div>
+      <h3>Total</h3>
+    </div>
+
+    <div>
+      <span class="total-number">{{getTotal() | currency}}</span>
+    </div>
+  </div>
+
 </main>
